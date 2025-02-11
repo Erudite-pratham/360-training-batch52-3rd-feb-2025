@@ -14,4 +14,9 @@ public interface UserService {
 
     // delete user by id
     User deleteUser(int id);
+
+    // jpql
+    User findUserByEmail(String email);
+
+    List<User> findUsersStartingWithA(Character character);
 }

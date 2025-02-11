@@ -29,6 +29,16 @@ public class UserController {
         return userService.getAllUsers();
     }
 
+//    @GetMapping("/{email}")
+//    public User findUserByEmail(@PathVariable String email){
+//        return userService.findUserByEmail(email);
+//    }
+
+    @GetMapping("/{character}")
+    public List<User> findUsersStartingWithA(@PathVariable Character character){
+        return userService.findUsersStartingWithA(character);
+    }
+
     // localhost:8080/users/100
     @DeleteMapping("/{id}")
     public User deleteUser(@PathVariable int id){
